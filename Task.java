@@ -6,15 +6,25 @@
 package TaskManager;
 
 import java.util.Date;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
 /**
  *
  * @author Mattafire
  */
+@Entity (name="TASKS")
 public class Task {
+    @Id
+    int taskId;
+    @Column (name="TASK_DUE_DATE")
     Date dateDue = new Date();
+    @Column (name="TASK_NAME")
     String taskName = new String();
+    @Column (name="TASK_NOTES")
     String notes = new String();
+    @Column (name="TASK_PRIORITY")
     String priority = new String();
 
     public Task(String name,String notes,Date date, String priority) {
