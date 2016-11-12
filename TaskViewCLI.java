@@ -18,7 +18,7 @@ public class TaskViewCLI {
     
     public void taskView(String[][] tasks){
         for(int i = 0; i<tasks.length;i++){
-            System.out.print(i + " " + tasks[i][0] + " " + tasks[i][1] + " " + tasks[i][2]+ " "); //+ " "+tasks[i][3]);
+            System.out.print(i+1 + " " + tasks[i][0] + " " + tasks[i][1] + " " + tasks[i][2]+ " "); //+ " "+tasks[i][3]);
             int length = 5 + tasks[i][0].length() + tasks[i][1].length() + tasks[i][2].length();
             for(int l=0;length<77&&l<tasks[i][3].length();length++,l++){
                 System.out.print(tasks[i][3].charAt(l));
@@ -32,11 +32,17 @@ public class TaskViewCLI {
         System.out.println("1: New Task");
         System.out.println("2: Edit Task");
         System.out.println("3: View Tasks");
-        System.out.println("4: Quit");
+        System.out.println("4: Save");
+        System.out.println("5: Quit");
         System.out.print(">>");
         Scanner input = new Scanner(System.in);
         String userIn = input.next();
         return userIn;
+    }
+    
+    public String save(){
+        System.out.println("Please enter a task number or type 'All'");
+        return getUserInput();
     }
     
     public void viewTask(String[] task){

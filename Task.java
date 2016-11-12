@@ -5,6 +5,7 @@
  */
 package TaskManager;
 
+import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -15,7 +16,7 @@ import javax.persistence.Id;
  * @author Mattafire
  */
 @Entity (name="TASKS")
-public class Task {
+public class Task implements Serializable{
     @Id
     int taskId;
     @Column (name="TASK_DUE_DATE")

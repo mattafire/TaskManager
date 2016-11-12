@@ -19,6 +19,7 @@ public class TaskHandler {
     ArrayList tasks = new ArrayList();
     TaskViewCLI outPut = new TaskViewCLI();
     SimpleDateFormat format = new SimpleDateFormat("MM/dd/yyyy");
+    Hibernate hib = new Hibernate();
 
     public TaskHandler() {
     }
@@ -99,6 +100,19 @@ public class TaskHandler {
                     toView();
                     break;
                 case "4":
+                    userIn = outPut.save();
+                    System.out.println(userIn + " "+(userIn.contains("all")));
+                    if(userIn.toLowerCase().contains("all")||userIn == "0"){
+                        for(int i = 0; i < tasks.size();i++){
+                            hib.updatetask((Task)tasks.get(i));
+                        }
+                    }
+                    else{
+                        hib.updatetask((Task)tasks.get(Integer.parseInt(userIn)-1));
+                    }
+                        
+                    break;
+                case "5" :
                     done = true;
                     break;
             }
