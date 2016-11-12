@@ -10,10 +10,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
-/**
- *
- * @author Mattafire
- */
+
 public class TaskHandler {
 
     ArrayList tasks = new ArrayList();

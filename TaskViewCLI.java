@@ -7,10 +7,6 @@ package TaskManager;
 
 import java.util.Scanner;
 
-/**
- *
- * @author Mattafire
- */
 public class TaskViewCLI {
 
     public TaskViewCLI() {
