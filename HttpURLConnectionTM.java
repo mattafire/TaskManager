@@ -1,13 +1,15 @@
-package src.TaskManager;
+
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-
 import javax.net.ssl.HttpsURLConnection;
-
+/**
+ *
+ * @author Mattafire
+ */
 public class HttpURLConnectionTM {
 
 	private final String USER_AGENT = "Ubber Hacker Task manager 2.0";
